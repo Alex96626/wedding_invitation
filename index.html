@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f5ef" />
+  <meta name="description" content="Свадебное приглашение Алины и Александра — 31 октября 2026 года." />
+  <title>Алина & Александр — 31 октября 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="intro" id="intro" aria-label="Открыть приглашение">
+    <div class="intro__grain"></div>
+    <div class="intro__hint">нажмите, чтобы открыть</div>
+
+    <button class="envelope" id="shell" aria-label="Открыть приглашение">
+      <svg class="envelope__svg" viewBox="0 0 800 500" role="img" aria-hidden="true">
+        <defs>
+          <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f6e6b3"/>
+            <stop offset=".45" stop-color="#d3a94f"/>
+            <stop offset="1" stop-color="#8a6423"/>
+          </linearGradient>
+          <linearGradient id="envPaper" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#fefcf6"/>
+            <stop offset=".55" stop-color="#f1eadb"/>
+            <stop offset="1" stop-color="#ddd0b2"/>
+          </linearGradient>
+          <radialGradient id="sealGrad" cx="30%" cy="24%" r="82%">
+            <stop offset="0" stop-color="#fffefa"/>
+            <stop offset=".5" stop-color="#f0e7d3"/>
+            <stop offset="1" stop-color="#d3c29a"/>
+          </radialGradient>
+          <radialGradient id="envGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#fffef8" stop-opacity=".95"/>
+            <stop offset=".55" stop-color="#f3ecd9" stop-opacity=".45"/>
+            <stop offset="1" stop-color="#f3ecd9" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="goldRing" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#fdf0c6"/>
+            <stop offset=".5" stop-color="#d3a84f"/>
+            <stop offset="1" stop-color="#93701f"/>
+          </linearGradient>
+          <filter id="fiber" x="-5%" y="-5%" width="110%" height="110%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="7" result="noise"/>
+            <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0.5  0 0 0 0 0.46  0 0 0 0 0.36  0 0 0 0.55 0" result="tint"/>
+            <feComponentTransfer in="tint" result="soft"><feFuncA type="linear" slope=".14"/></feComponentTransfer>
+            <feBlend in="SourceGraphic" in2="soft" mode="multiply"/>
+          </filter>
+          <filter id="envShadow" x="-40%" y="-40%" width="220%" height="220%">
+            <feDropShadow dx="0" dy="14" stdDeviation="18" flood-opacity=".2"/>
+          </filter>
+          <filter id="sealShadow" x="-60%" y="-60%" width="220%" height="220%">
+            <feDropShadow dx="0" dy="7" stdDeviation="7" flood-opacity=".3"/>
+          </filter>
+        </defs>
+
+        <!-- envelope body (static, sits under the flap) -->
+        <g class="envelope__body" filter="url(#envShadow)">
+          <rect x="20" y="20" width="760" height="460" rx="4" fill="url(#envPaper)" stroke="#b6ac91" stroke-width="2" filter="url(#fiber)"/>
+          <path d="M20 300 L400 470" fill="none" stroke="#c1b596" stroke-width="1.4" opacity=".5"/>
+          <path d="M780 300 L400 470" fill="none" stroke="#c1b596" stroke-width="1.4" opacity=".5"/>
+        </g>
+
+        <circle class="envelope__glow" cx="400" cy="290" r="105" fill="url(#envGlow)"/>
+
+        <g class="envelope__rings">
+          <circle cx="384" cy="288" r="27" fill="none" stroke="url(#goldRing)" stroke-width="8"/>
+          <circle cx="418" cy="291" r="27" fill="none" stroke="url(#goldRing)" stroke-width="8"/>
+          <circle cx="384" cy="288" r="27" fill="none" stroke="#7c5e22" stroke-width="1" opacity=".22"/>
+          <circle cx="418" cy="291" r="27" fill="none" stroke="#7c5e22" stroke-width="1" opacity=".22"/>
+          <path d="M429 258 L432 265 L439 268 L432 271 L429 278 L426 271 L419 268 L426 265 Z" fill="#fff8e2"/>
+        </g>
+
+        <!-- top flap (hinged; the seal travels with it and opens together) -->
+        <g class="envelope__flap">
+          <path d="M20 20 L780 20 L400 290 Z" fill="url(#envPaper)" stroke="#b6ac91" stroke-width="2" filter="url(#fiber)"/>
+          <path d="M20 20 L400 290" fill="none" stroke="#c1b596" stroke-width="1.4" opacity=".55"/>
+          <path d="M780 20 L400 290" fill="none" stroke="#c1b596" stroke-width="1.4" opacity=".55"/>
+
+          <text x="400" y="128" text-anchor="middle" font-family="'Playfair Display', serif" font-size="50" letter-spacing="9" fill="url(#gold)">А | А</text>
+          <text x="400" y="200" text-anchor="middle" font-family="'Great Vibes', cursive" font-size="64" fill="url(#gold)">Wedding</text>
+
+          <g class="envelope__seal" filter="url(#sealShadow)">
+            <circle cx="400" cy="300" r="62" fill="url(#sealGrad)" stroke="#cbbb90" stroke-width="1.5"/>
+            <ellipse cx="400" cy="366" rx="11" ry="8" fill="url(#sealGrad)" stroke="#cbbb90" stroke-width="1"/>
+            <g transform="translate(400 300)" fill="#e2d5ae" stroke="none">
+              <path d="M0,-32 C6,-23 6,-9 0,-1 C-6,-9 -6,-23 0,-32 Z"/>
+              <path d="M0,-9 C-13,-13 -21,-5 -19,5 C-17,13 -8,13 -4,5 C-2,1 -2,-5 0,-9 Z"/>
+              <path d="M0,-9 C13,-13 21,-5 19,5 C17,13 8,13 4,5 C2,1 2,-5 0,-9 Z"/>
+              <rect x="-15" y="7" width="30" height="4" rx="2"/>
+              <path d="M0,11 C4,15 4,20 0,24 C-4,20 -4,15 0,11 Z"/>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </button>
+  </div>
+
+  <main class="site" id="site" aria-hidden="true">
+    <section class="hero">
+      <div class="botanical botanical--top">
+        <svg viewBox="0 0 900 430" aria-hidden="true">
+          <g fill="none" stroke="#aeb9a7" stroke-width="3" stroke-linecap="round">
+            <path d="M-20 180C170 120 270 120 430 250C575 365 720 350 930 155"/>
+            <path d="M100 145C130 85 150 38 210 8"/>
+            <path d="M210 205C250 130 286 88 350 42"/>
+            <path d="M510 278C548 194 594 122 670 68"/>
+            <path d="M675 280C700 190 755 126 835 88"/>
+          </g>
+          <g fill="#c7d0c1" opacity=".9">
+            <ellipse cx="135" cy="98" rx="48" ry="24" transform="rotate(-55 135 98)"/>
+            <ellipse cx="190" cy="150" rx="52" ry="25" transform="rotate(30 190 150)"/>
+            <ellipse cx="278" cy="105" rx="54" ry="26" transform="rotate(-42 278 105)"/>
+            <ellipse cx="345" cy="183" rx="58" ry="28" transform="rotate(34 345 183)"/>
+            <ellipse cx="550" cy="175" rx="55" ry="28" transform="rotate(-46 550 175)"/>
+            <ellipse cx="628" cy="226" rx="62" ry="30" transform="rotate(30 628 226)"/>
+            <ellipse cx="742" cy="156" rx="60" ry="30" transform="rotate(-38 742 156)"/>
+            <ellipse cx="805" cy="228" rx="58" ry="28" transform="rotate(30 805 228)"/>
+          </g>
+          <g fill="#f7f7f2" stroke="#d9ded4" stroke-width="2">
+            <g transform="translate(245 130)">
+              <ellipse cx="0" cy="-22" rx="22" ry="36"/><ellipse cx="20" cy="-7" rx="22" ry="36" transform="rotate(72 20 -7)"/>
+              <ellipse cx="12" cy="20" rx="22" ry="36" transform="rotate(144 12 20)"/><ellipse cx="-18" cy="20" rx="22" ry="36" transform="rotate(216 -18 20)"/>
+              <ellipse cx="-20" cy="-7" rx="22" ry="36" transform="rotate(288 -20 -7)"/><circle r="11" fill="#d7cdb9"/>
+            </g>
+            <g transform="translate(610 150) scale(.9)">
+              <ellipse cx="0" cy="-22" rx="22" ry="36"/><ellipse cx="20" cy="-7" rx="22" ry="36" transform="rotate(72 20 -7)"/>
+              <ellipse cx="12" cy="20" rx="22" ry="36" transform="rotate(144 12 20)"/><ellipse cx="-18" cy="20" rx="22" ry="36" transform="rotate(216 -18 20)"/>
+              <ellipse cx="-20" cy="-7" rx="22" ry="36" transform="rotate(288 -20 -7)"/><circle r="11" fill="#d7cdb9"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div class="hero__inner">
+        <p class="eyebrow">приглашение на свадьбу</p>
+        <h1><span><span class="cap">А</span>лина</span><i>&</i><span><span class="cap">А</span>лександр</span></h1>
+        <div class="hero__date">31 · 10 · 2026</div>
+        <p class="hero__place">мы будем очень рады разделить этот день с вами</p>
+        <div class="scroll-mark"><span></span>листайте ниже</div>
+      </div>
+    </section>
+
+    <section class="story section">
+      <div class="leaf-motif leaf-motif--left">❧</div>
+      <div class="section__inner narrow">
+        <p class="kicker">дорогие наши</p>
+        <h2>Когда-то мы просто встретились.</h2>
+        <div class="divider">✦</div>
+        <p class="lead">
+          Потом начали строить нашу жизнь вместе — смеяться, мечтать, спорить,
+          мириться, поддерживать друг друга и становиться друг для друга домом.
+        </p>
+        <p>
+          И вот однажды наступает тот самый день, когда два человека становятся
+          одной семьёй. Мы очень хотим, чтобы в этот момент рядом с нами были именно вы.
+        </p>
+        <p>
+          Потому что свадьба — это не только про нас двоих. Это ещё и про людей,
+          которые были рядом, которые любят нас, знают нашу историю и искренне разделят
+          с нами наше счастье.
+        </p>
+        <p>
+          Поэтому мы приглашаем вас не просто на наш праздник. Мы приглашаем вас
+          стать частью одного из самых важных дней нашей жизни.
+        </p>
+        <div class="heart">♡</div>
+      </div>
+    </section>
+
+    <section class="details section">
+      <div class="section__inner">
+        <p class="kicker">этот день</p>
+        <h2>Важные моменты</h2>
+        <div class="timeline">
+          <div class="time-card reveal">
+            <span class="time">12:00</span>
+            <span class="line"></span>
+            <span class="label">регистрация брака</span>
+          </div>
+          <div class="time-card reveal">
+            <span class="time">17:00</span>
+            <span class="line"></span>
+            <span class="label">начало банкета</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="venue section">
+      <div class="venue__botanical">❦</div>
+      <div class="section__inner">
+        <p class="kicker">место встречи</p>
+        <h2>Где мы будем</h2>
+        <div class="venue-card reveal">
+          <div class="venue-card__icon">⌖</div>
+          <h3>Чистые пруды</h3>
+          <p>Киевская ул., 80, Симферополь</p>
+          <div class="venue-card__note">подробности и карта появятся здесь</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dresscode section">
+      <div class="section__inner narrow">
+        <p class="kicker">dress code</p>
+        <h2>RED CARPET</h2>
+        <div class="dresscode__star">✦</div>
+        <p class="lead">
+          В этот день хочется, чтобы каждый выглядел так, будто пришёл
+          на свою собственную красную дорожку.
+        </p>
+        <p>
+          Поэтому дресс-код простой: <strong>очень нарядно.</strong>
+          Платья, костюмы, каблуки, украшения — всё то, что обычно ждёт особого случая.
+          А этот день как раз тот самый случай.
+        </p>
+      </div>
+    </section>
+
+    <section class="gifts section">
+      <div class="section__inner narrow">
+        <p class="kicker">маленькая просьба</p>
+        <h2>Вместо цветов</h2>
+        <div class="gift-icon">🌿</div>
+        <p class="lead">
+          Цветы прекрасны, но мы решили попросить вас об одной маленькой альтернативе.
+        </p>
+        <p>
+          Букеты можно не дарить. Если захотите сделать нам подарок,
+          вместо цветов можно принести бутылочку хорошего алкоголя.
+        </p>
+        <div class="gift-icon gift-icon--bottom">🥂</div>
+        <p>
+          Мы будем собирать нашу маленькую семейную коллекцию и открывать бутылочки
+          по особенным поводам, вспоминая день, с которого началась наша семья.
+        </p>
+      </div>
+    </section>
+
+    <section class="countdown section">
+      <div class="section__inner">
+        <p class="kicker">до нашей встречи</p>
+        <h2>Осталось совсем немного</h2>
+        <div class="countdown__grid" id="countdown">
+          <div><strong data-unit="days">000</strong><span>дней</span></div>
+          <div><strong data-unit="hours">00</strong><span>часов</span></div>
+          <div><strong data-unit="minutes">00</strong><span>минут</span></div>
+          <div><strong data-unit="seconds">00</strong><span>секунд</span></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer section">
+      <div class="section__inner narrow">
+        <div class="footer__ornament">❧</div>
+        <p class="kicker">до встречи 31 октября</p>
+        <h2>Будьте рядом.<br>Смейтесь с нами.<br>Обнимайте нас покрепче.</h2>
+        <p class="footer__text">Мы очень ждём вас.</p>
+        <div class="signature">Алина <span>&</span> Александр</div>
+        <div class="footer__heart">♡</div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
