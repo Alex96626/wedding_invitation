@@ -261,6 +261,15 @@ body.locked { overflow: hidden; }
   font-weight: 400;
 }
 .venue-card p { font-size: 22px; }
+.venue-map {
+  max-width: 570px;
+  height: 320px;
+  margin: 2.5rem auto 0;
+  border: 1px solid rgba(90, 87, 77, .15);
+  box-shadow: 0 18px 50px rgba(71, 68, 59, .06);
+  overflow: hidden;
+}
+.venue-map iframe { display: block; border: 0; }
 .venue-card__note {
   margin-top: 2rem;
   font-family: Montserrat, sans-serif;
