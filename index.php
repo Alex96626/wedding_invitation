@@ -1,3 +1,26 @@
+<?php
+$name1 = isset($_GET['name']) ? trim($_GET['name']) : '';
+$name2 = isset($_GET['name2']) ? trim($_GET['name2']) : '';
+
+function guessGenderPrefix($name) {
+  // "вася" оканчивается на "я", но это мужское имя
+  $maleExceptions = ['вася'];
+  $lower = mb_strtolower($name, 'UTF-8');
+  if (in_array($lower, $maleExceptions, true)) {
+    return 'дорогой наш';
+  }
+  $lastChar = mb_substr($lower, -1, 1, 'UTF-8');
+  return ($lastChar === 'а' || $lastChar === 'я') ? 'дорогая наша' : 'дорогой наш';
+}
+
+if ($name1 !== '' && $name2 !== '') {
+  $greeting = htmlspecialchars($name1, ENT_QUOTES, 'UTF-8') . ' и ' . htmlspecialchars($name2, ENT_QUOTES, 'UTF-8');
+} elseif ($name1 !== '') {
+  $greeting = guessGenderPrefix($name1) . ' ' . htmlspecialchars($name1, ENT_QUOTES, 'UTF-8');
+} else {
+  $greeting = 'дорогие наши';
+}
+?>
 <!doctype html>
 <html lang="ru">
 <head>
@@ -282,7 +305,7 @@
     <section class="story section">
       <div class="leaf-motif leaf-motif--left">❧</div>
       <div class="section__inner narrow">
-        <p class="kicker">дорогие наши</p>
+        <p class="kicker"><?php echo $greeting; ?></p>
         <h2>Есть дни, которые хочется разделить с самыми близкими.</h2>
         <div class="divider">✦</div>
         <p class="lead">
