@@ -244,7 +244,10 @@ body.locked { overflow: hidden; }
   color: #73766d;
 }
 
-.venue { background: #f8f6f0; }
+.venue { 
+  padding: 0.25rem 1.25rem 7rem 1.25rem;
+  background: #f8f6f0; 
+}
 .venue-card {
   max-width: 570px;
   margin: 0 auto;
@@ -357,6 +360,10 @@ body.locked { overflow: hidden; }
   .countdown__grid > div:nth-child(2) { border-right: 0; }
   .countdown__grid > div:nth-child(3) { border-top: 1px solid rgba(255,255,255,.15); padding-top: 2rem; }
   .countdown__grid > div:nth-child(4) { border-top: 1px solid rgba(255,255,255,.15); padding-top: 2rem; }
+  .venue { 
+    padding: 0.25rem 1.25rem 7rem 1.25rem;
+    background: #f8f6f0; 
+  }
 }
 
 /* --- СТИЛИ ДЛЯ ШИКАРНОГО СТАРТОВОГО БЛОКА --- */
