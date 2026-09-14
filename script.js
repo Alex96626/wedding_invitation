@@ -4,12 +4,38 @@ document.addEventListener("DOMContentLoaded", () => {
   const intro = document.getElementById("intro");
   const shell = document.getElementById("shell");
   const site = document.getElementById("site");
+  const music = document.getElementById("bgMusic");
+  const musicToggle = document.getElementById("musicToggle");
   let opened = false;
+
+  function playMusic() {
+    if (!music) return;
+    music.play().then(() => {
+      musicToggle.classList.add("is-playing");
+      musicToggle.setAttribute("aria-pressed", "true");
+    }).catch(() => {});
+  }
+
+  function toggleMusic() {
+    if (!music) return;
+    if (music.paused) {
+      playMusic();
+    } else {
+      music.pause();
+      musicToggle.classList.remove("is-playing");
+      musicToggle.setAttribute("aria-pressed", "false");
+    }
+  }
+
+  if (musicToggle) {
+    musicToggle.addEventListener("click", toggleMusic);
+  }
 
   function openInvitation() {
     if (opened) return;
     opened = true;
     shell.classList.add("is-open");
+    playMusic();
 
     // Открытие конверта: даём анимации завершиться перед показом сайта.
     setTimeout(() => {
